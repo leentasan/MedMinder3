@@ -399,10 +399,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Table1Row AddTable1Row(int Id, string Medicine_Name, System.TimeSpan Consumption_Time, decimal Initial_Time, decimal Amount_of_medicine) {
+            public Table1Row AddTable1Row(string Medicine_Name, System.TimeSpan Consumption_Time, decimal Initial_Time, decimal Amount_of_medicine) {
                 Table1Row rowTable1Row = ((Table1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        null,
                         Medicine_Name,
                         Consumption_Time,
                         Initial_Time,
@@ -458,9 +458,11 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnAmount_of_medicine);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
-                this.columnMedicine_Name.MaxLength = 10;
+                this.columnMedicine_Name.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

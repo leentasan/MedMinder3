@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label medicine_NameLabel;
             System.Windows.Forms.Label consumption_TimeLabel;
             System.Windows.Forms.Label initial_TimeLabel;
@@ -52,12 +51,16 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.table1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.idTextBox = new System.Windows.Forms.TextBox();
             this.medicine_NameTextBox = new System.Windows.Forms.TextBox();
             this.consumption_TimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.initial_TimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.amount_of_medicineNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            idLabel = new System.Windows.Forms.Label();
+            this.table1DataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             medicine_NameLabel = new System.Windows.Forms.Label();
             consumption_TimeLabel = new System.Windows.Forms.Label();
             initial_TimeLabel = new System.Windows.Forms.Label();
@@ -68,6 +71,7 @@
             this.table1BindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consumption_TimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amount_of_medicineNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // database1DataSet
@@ -215,23 +219,6 @@
             this.table1BindingNavigatorSaveItem.Text = "Save Data";
             this.table1BindingNavigatorSaveItem.Click += new System.EventHandler(this.table1BindingNavigatorSaveItem_Click);
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(182, 104);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 16);
-            idLabel.TabIndex = 1;
-            idLabel.Text = "Id:";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table1BindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(315, 101);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(200, 22);
-            this.idTextBox.TabIndex = 2;
-            // 
             // medicine_NameLabel
             // 
             medicine_NameLabel.AutoSize = true;
@@ -301,13 +288,70 @@
             this.amount_of_medicineNumericUpDown.Size = new System.Drawing.Size(200, 22);
             this.amount_of_medicineNumericUpDown.TabIndex = 10;
             // 
+            // table1DataGridView
+            // 
+            this.table1DataGridView.AutoGenerateColumns = false;
+            this.table1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table1DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.table1DataGridView.DataSource = this.table1BindingSource;
+            this.table1DataGridView.Location = new System.Drawing.Point(62, 273);
+            this.table1DataGridView.Name = "table1DataGridView";
+            this.table1DataGridView.RowHeadersWidth = 51;
+            this.table1DataGridView.RowTemplate.Height = 24;
+            this.table1DataGridView.Size = new System.Drawing.Size(669, 220);
+            this.table1DataGridView.TabIndex = 10;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Medicine Name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Medicine Name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Consumption Time";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Consumption Time";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Initial Time";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Initial Time";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Amount of medicine";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Amount of medicine";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
+            this.ClientSize = new System.Drawing.Size(800, 547);
+            this.Controls.Add(this.table1DataGridView);
             this.Controls.Add(medicine_NameLabel);
             this.Controls.Add(this.medicine_NameTextBox);
             this.Controls.Add(consumption_TimeLabel);
@@ -327,6 +371,7 @@
             this.table1BindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consumption_TimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.amount_of_medicineNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1DataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,11 +396,16 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton table1BindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox medicine_NameTextBox;
         private System.Windows.Forms.NumericUpDown consumption_TimeNumericUpDown;
         private System.Windows.Forms.DateTimePicker initial_TimeDateTimePicker;
         private System.Windows.Forms.NumericUpDown amount_of_medicineNumericUpDown;
+        private System.Windows.Forms.DataGridView table1DataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }
 
