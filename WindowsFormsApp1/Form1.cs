@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static WindowsFormsApp1.Database1DataSet;
 
 namespace WindowsFormsApp1
 {
@@ -34,7 +35,48 @@ namespace WindowsFormsApp1
 
         private void initial_TimeDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
+            // Dapatkan nilai dari kontrol input
+            DateTime initialTime = initial_TimeDateTimePicker.Value;
 
+            // Dapatkan objek data dari BindingSource
+            Table1Row medicineRow = (Table1Row)table1BindingSource.Current;
+
+            // Set nilai data
+            medicineRow.Table1.InitialTime = initialTime;
+
+            // Perbarui data dalam database
+            table1TableAdapter.Update(medicineRow);
+        }
+
+        private void consumption_TimeNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            // Dapatkan nilai dari kontrol input
+            int consumptionTime = consumption_TimeNumericUpDown.Value;
+
+            // Dapatkan objek data dari BindingSource
+            Table1Row medicineRow = (Table1Row)table1BindingSource.Current;
+
+            // Set nilai data
+            medicineRow.ConsumptionTime = consumptionTime;
+
+            // Perbarui data dalam database
+            table1TableAdapter.Update(medicineRow);
+
+        }
+
+        private void medicine_NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // Dapatkan nilai dari kontrol input
+            string medicineName = medicine_NameTextBox.Text;
+
+            // Dapatkan objek data dari BindingSource
+            Table1Row medicineRow = (Table1Row)table1BindingSource.Current;
+
+            // Set nilai data
+            medicineRow.MedicineName = medicineName;
+
+            // Perbarui data dalam database
+            table1TableAdapter.Update(medicineRow);
         }
     }
 }

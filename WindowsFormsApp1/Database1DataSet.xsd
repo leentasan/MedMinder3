@@ -86,20 +86,20 @@ SELECT Id, [Medicine Name], [Consumption Time], [Initial Time], [Amount of medic
   <xs:element name="Database1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Database1DataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database1DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Table1" msprop:Generator_RowClassName="Table1Row" msprop:Generator_RowEvHandlerName="Table1RowChangeEventHandler" msprop:Generator_RowDeletedName="Table1RowDeleted" msprop:Generator_RowDeletingName="Table1RowDeleting" msprop:Generator_RowEvArgName="Table1RowChangeEvent" msprop:Generator_TablePropName="Table1" msprop:Generator_RowChangedName="Table1RowChanged" msprop:Generator_UserTableName="Table1" msprop:Generator_RowChangingName="Table1RowChanging" msprop:Generator_TableClassName="Table1DataTable" msprop:Generator_TableVarName="tableTable1">
+        <xs:element name="Table1" msprop:Generator_RowEvHandlerName="Table1RowChangeEventHandler" msprop:Generator_RowDeletedName="Table1RowDeleted" msprop:Generator_RowDeletingName="Table1RowDeleting" msprop:Generator_RowEvArgName="Table1RowChangeEvent" msprop:Generator_TablePropName="Table1" msprop:Generator_RowChangedName="Table1RowChanged" msprop:Generator_UserTableName="Table1" msprop:Generator_RowChangingName="Table1RowChanging" msprop:Generator_RowClassName="Table1Row" msprop:Generator_TableClassName="Table1DataTable" msprop:Generator_TableVarName="tableTable1">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
-              <xs:element name="Medicine_x0020_Name" msprop:Generator_UserColumnName="Medicine Name" msprop:Generator_ColumnPropNameInTable="Medicine_NameColumn" msprop:Generator_ColumnPropNameInRow="Medicine_Name" msprop:Generator_ColumnVarNameInTable="columnMedicine_Name" minOccurs="0">
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Medicine_x0020_Name" msprop:Generator_ColumnPropNameInTable="Medicine_NameColumn" msprop:Generator_ColumnPropNameInRow="Medicine_Name" msprop:Generator_UserColumnName="Medicine Name" msprop:Generator_ColumnVarNameInTable="columnMedicine_Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Consumption_x0020_Time" msprop:Generator_UserColumnName="Consumption Time" msprop:Generator_ColumnPropNameInTable="Consumption_TimeColumn" msprop:Generator_ColumnPropNameInRow="Consumption_Time" msprop:Generator_ColumnVarNameInTable="columnConsumption_Time" type="xs:duration" minOccurs="0" />
-              <xs:element name="Initial_x0020_Time" msprop:Generator_UserColumnName="Initial Time" msprop:Generator_ColumnPropNameInTable="Initial_TimeColumn" msprop:Generator_ColumnPropNameInRow="Initial_Time" msprop:Generator_ColumnVarNameInTable="columnInitial_Time" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Amount_x0020_of_x0020_medicine" msprop:Generator_UserColumnName="Amount of medicine" msprop:Generator_ColumnPropNameInTable="Amount_of_medicineColumn" msprop:Generator_ColumnPropNameInRow="Amount_of_medicine" msprop:Generator_ColumnVarNameInTable="columnAmount_of_medicine" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Consumption_x0020_Time" msprop:Generator_ColumnPropNameInTable="Consumption_TimeColumn" msprop:Generator_ColumnPropNameInRow="Consumption_Time" msprop:Generator_UserColumnName="Consumption Time" msprop:Generator_ColumnVarNameInTable="columnConsumption_Time" type="xs:duration" minOccurs="0" />
+              <xs:element name="Initial_x0020_Time" msprop:Generator_ColumnPropNameInTable="Initial_TimeColumn" msprop:Generator_ColumnPropNameInRow="Initial_Time" msprop:Generator_UserColumnName="Initial Time" msprop:Generator_ColumnVarNameInTable="columnInitial_Time" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Amount_x0020_of_x0020_medicine" msprop:Generator_ColumnPropNameInTable="Amount_of_medicineColumn" msprop:Generator_ColumnPropNameInRow="Amount_of_medicine" msprop:Generator_UserColumnName="Amount of medicine" msprop:Generator_ColumnVarNameInTable="columnAmount_of_medicine" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

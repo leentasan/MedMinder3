@@ -29,27 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label medicine_NameLabel;
             System.Windows.Forms.Label consumption_TimeLabel;
             System.Windows.Forms.Label initial_TimeLabel;
             System.Windows.Forms.Label amount_of_medicineLabel;
-            this.database1DataSet = new WindowsFormsApp1.Database1DataSet();
-            this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.table1TableAdapter = new WindowsFormsApp1.Database1DataSetTableAdapters.Table1TableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.Database1DataSetTableAdapters.TableAdapterManager();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.table1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.table1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.medicine_NameTextBox = new System.Windows.Forms.TextBox();
             this.consumption_TimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -61,38 +57,58 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet = new WindowsFormsApp1.Database1DataSet();
+            this.table1TableAdapter = new WindowsFormsApp1.Database1DataSetTableAdapters.Table1TableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.Database1DataSetTableAdapters.TableAdapterManager();
             medicine_NameLabel = new System.Windows.Forms.Label();
             consumption_TimeLabel = new System.Windows.Forms.Label();
             initial_TimeLabel = new System.Windows.Forms.Label();
             amount_of_medicineLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1BindingNavigator)).BeginInit();
             this.table1BindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consumption_TimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amount_of_medicineNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // database1DataSet
+            // medicine_NameLabel
             // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            medicine_NameLabel.AutoSize = true;
+            medicine_NameLabel.Location = new System.Drawing.Point(182, 132);
+            medicine_NameLabel.Name = "medicine_NameLabel";
+            medicine_NameLabel.Size = new System.Drawing.Size(105, 16);
+            medicine_NameLabel.TabIndex = 3;
+            medicine_NameLabel.Text = "Medicine Name:";
             // 
-            // table1BindingSource
+            // consumption_TimeLabel
             // 
-            this.table1BindingSource.DataMember = "Table1";
-            this.table1BindingSource.DataSource = this.database1DataSet;
+            consumption_TimeLabel.AutoSize = true;
+            consumption_TimeLabel.Location = new System.Drawing.Point(182, 157);
+            consumption_TimeLabel.Name = "consumption_TimeLabel";
+            consumption_TimeLabel.Size = new System.Drawing.Size(122, 16);
+            consumption_TimeLabel.TabIndex = 5;
+            consumption_TimeLabel.Text = "Consumption Time:";
             // 
-            // table1TableAdapter
+            // initial_TimeLabel
             // 
-            this.table1TableAdapter.ClearBeforeFill = true;
+            initial_TimeLabel.AutoSize = true;
+            initial_TimeLabel.Location = new System.Drawing.Point(182, 189);
+            initial_TimeLabel.Name = "initial_TimeLabel";
+            initial_TimeLabel.Size = new System.Drawing.Size(74, 16);
+            initial_TimeLabel.TabIndex = 7;
+            initial_TimeLabel.Text = "Initial Time:";
             // 
-            // tableAdapterManager
+            // amount_of_medicineLabel
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Table1TableAdapter = this.table1TableAdapter;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            amount_of_medicineLabel.AutoSize = true;
+            amount_of_medicineLabel.Location = new System.Drawing.Point(182, 213);
+            amount_of_medicineLabel.Name = "amount_of_medicineLabel";
+            amount_of_medicineLabel.Size = new System.Drawing.Size(127, 16);
+            amount_of_medicineLabel.TabIndex = 9;
+            amount_of_medicineLabel.Text = "Amount of medicine:";
             // 
             // table1BindingNavigator
             // 
@@ -121,9 +137,34 @@
             this.table1BindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.table1BindingNavigator.Name = "table1BindingNavigator";
             this.table1BindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.table1BindingNavigator.Size = new System.Drawing.Size(800, 27);
+            this.table1BindingNavigator.Size = new System.Drawing.Size(800, 31);
             this.table1BindingNavigator.TabIndex = 0;
             this.table1BindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -131,7 +172,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -140,34 +181,28 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -175,7 +210,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -184,49 +219,22 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // table1BindingNavigatorSaveItem
             // 
             this.table1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.table1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("table1BindingNavigatorSaveItem.Image")));
             this.table1BindingNavigatorSaveItem.Name = "table1BindingNavigatorSaveItem";
-            this.table1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.table1BindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.table1BindingNavigatorSaveItem.Text = "Save Data";
             this.table1BindingNavigatorSaveItem.Click += new System.EventHandler(this.table1BindingNavigatorSaveItem_Click);
-            // 
-            // medicine_NameLabel
-            // 
-            medicine_NameLabel.AutoSize = true;
-            medicine_NameLabel.Location = new System.Drawing.Point(182, 132);
-            medicine_NameLabel.Name = "medicine_NameLabel";
-            medicine_NameLabel.Size = new System.Drawing.Size(105, 16);
-            medicine_NameLabel.TabIndex = 3;
-            medicine_NameLabel.Text = "Medicine Name:";
             // 
             // medicine_NameTextBox
             // 
@@ -235,15 +243,7 @@
             this.medicine_NameTextBox.Name = "medicine_NameTextBox";
             this.medicine_NameTextBox.Size = new System.Drawing.Size(200, 22);
             this.medicine_NameTextBox.TabIndex = 4;
-            // 
-            // consumption_TimeLabel
-            // 
-            consumption_TimeLabel.AutoSize = true;
-            consumption_TimeLabel.Location = new System.Drawing.Point(182, 157);
-            consumption_TimeLabel.Name = "consumption_TimeLabel";
-            consumption_TimeLabel.Size = new System.Drawing.Size(122, 16);
-            consumption_TimeLabel.TabIndex = 5;
-            consumption_TimeLabel.Text = "Consumption Time:";
+            this.medicine_NameTextBox.TextChanged += new System.EventHandler(this.medicine_NameTextBox_TextChanged);
             // 
             // consumption_TimeNumericUpDown
             // 
@@ -252,15 +252,7 @@
             this.consumption_TimeNumericUpDown.Name = "consumption_TimeNumericUpDown";
             this.consumption_TimeNumericUpDown.Size = new System.Drawing.Size(200, 22);
             this.consumption_TimeNumericUpDown.TabIndex = 6;
-            // 
-            // initial_TimeLabel
-            // 
-            initial_TimeLabel.AutoSize = true;
-            initial_TimeLabel.Location = new System.Drawing.Point(182, 189);
-            initial_TimeLabel.Name = "initial_TimeLabel";
-            initial_TimeLabel.Size = new System.Drawing.Size(74, 16);
-            initial_TimeLabel.TabIndex = 7;
-            initial_TimeLabel.Text = "Initial Time:";
+            this.consumption_TimeNumericUpDown.ValueChanged += new System.EventHandler(this.consumption_TimeNumericUpDown_ValueChanged);
             // 
             // initial_TimeDateTimePicker
             // 
@@ -270,15 +262,6 @@
             this.initial_TimeDateTimePicker.Size = new System.Drawing.Size(205, 22);
             this.initial_TimeDateTimePicker.TabIndex = 8;
             this.initial_TimeDateTimePicker.ValueChanged += new System.EventHandler(this.initial_TimeDateTimePicker_ValueChanged);
-            // 
-            // amount_of_medicineLabel
-            // 
-            amount_of_medicineLabel.AutoSize = true;
-            amount_of_medicineLabel.Location = new System.Drawing.Point(182, 213);
-            amount_of_medicineLabel.Name = "amount_of_medicineLabel";
-            amount_of_medicineLabel.Size = new System.Drawing.Size(127, 16);
-            amount_of_medicineLabel.TabIndex = 9;
-            amount_of_medicineLabel.Text = "Amount of medicine:";
             // 
             // amount_of_medicineNumericUpDown
             // 
@@ -346,6 +329,26 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
+            // table1BindingSource
+            // 
+            this.table1BindingSource.DataMember = "Table1";
+            this.table1BindingSource.DataSource = this.database1DataSet;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // table1TableAdapter
+            // 
+            this.table1TableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Table1TableAdapter = this.table1TableAdapter;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -364,14 +367,14 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1BindingNavigator)).EndInit();
             this.table1BindingNavigator.ResumeLayout(false);
             this.table1BindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consumption_TimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.amount_of_medicineNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
